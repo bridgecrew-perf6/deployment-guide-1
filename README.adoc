@@ -1,5 +1,10 @@
 :imagesdir: img
 
+#getting started
+
+to install the node, i recommend to go through here: https://github.com/nmzn/pluginnode-install 
+its a one-click install with only some prompts to set your login credentials and keys. thats it.
+
 # deployment-guide
 This is my take on a guide to explain how to deploy the jobs and contracts to get a plugin node ready
 Node Oracle Deployment Guide
