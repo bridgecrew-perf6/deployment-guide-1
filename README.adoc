@@ -13,15 +13,15 @@ After setting up the wallet,  we need to add an adress to it for the deployment 
 
 Press on the Menu (1) to open the „Wallet Options“. Then press on „Settings“ (2) to see the following:
  
-image::Step1.png
+image::Step1.png[Step1]
  
 Enter the „New RPC URL“ ( https://erpc.xinfin.network/ ) and press „save“
 
-<img width="276" alt="Step2" src="https://user-images.githubusercontent.com/95173225/153218356-49e719a9-d0cf-4602-b2bf-fb44301afa23.png">
+image::Step2.png[Step2]
 
 You should now see the following:
  
-<img width="247" alt="Step3" src="https://user-images.githubusercontent.com/95173225/153218401-e77e6518-984d-461f-b13e-f14211782d78.png">
+image::Step3.png[Step3]
 
 **Step 2:**
 
@@ -29,7 +29,7 @@ Open https://remix.xinfin.network/ in the same browser in which you have set up 
 
 Open the „Oracle.sol“ as shown below. If it´s not there for you, just create a new file with this name. Thats just as fine.
 
-<img width="989" alt="Step4" src="https://user-images.githubusercontent.com/95173225/153218478-27c54fec-93a3-42e4-a13a-1b83e10922cd.png">
+image::Step4.png[Step4]
 
 Paste the following code snippet into the fresh file or check the content to appear as shown below:
 Code:
@@ -42,11 +42,11 @@ Code:
 First get into the „Solidity Compiler“ (1)
 Check if the compiler (2) has the same version as shown in the code (3).
  
-<img width="629" alt="Step5" src="https://user-images.githubusercontent.com/95173225/153218761-ad229167-275a-438f-8780-244aa34274da.png">
+image::Step5.png[Step5]
 
 Click „Compile Oracle.sol“ (1) and see that the logo shows a green checkmark (2)
   
-<img width="525" alt="Step6" src="https://user-images.githubusercontent.com/95173225/153218790-edc6046b-002d-432c-a8ee-3a74e4d7888d.png">
+image::Step6.png[Step6]
 
 **Step 4:**
 
@@ -56,34 +56,32 @@ Check that your wallet adress is shown (3)
 Paste the PLI Smart Contract ( 0xff7412ea7c8445c46a8254dfb557ac1e48094391 ) adress into the „Deploy“ form (4)
 Press „Deploy“ (5)
  
-<img width="613" alt="Step7" src="https://user-images.githubusercontent.com/95173225/153218812-abfc453a-7d5e-43c2-9bd8-8b0703cd20c1.png">
+image::Step7.png[Step7]
 
 You are asked to confirm a transaction. Feel free to press „Submit“
  
-<img width="262" alt="Step8" src="https://user-images.githubusercontent.com/95173225/153219021-46094e13-ab28-44fd-ab23-1ae06a56a50c.png">
+image::Step8.png[Step8]
 
 After submitting the transaction you should see this:
 
-<img width="762" alt="Step9" src="https://user-images.githubusercontent.com/95173225/153219044-ed3e7333-d764-4094-aca2-e76dac0595b3.png">
+image::Step9.png[Step9]
 
 In the output part the bottom of your webbrowser.
 (If not, make sure you have selected the https://erpc.xinfin.network/ node in you wallet)
 
 Now click on the output (1) and copy your transaction hash (2)
  
-<img width="745" alt="Step10" src="https://user-images.githubusercontent.com/95173225/153219075-6679aef5-a78a-4208-8eea-ac1f6fea67ca.png">
-
+image::Step10.png[Step10]
 
 Go to https://explorer.xinfin.network/ (1)
 
- 
 And paste the tx-hash into the searchbox (2). Then click on the „search“ button (3).
 
-<img width="691" alt="Step11" src="https://user-images.githubusercontent.com/95173225/153219127-4f81c6d9-bf96-4a56-8eda-b0d0595e6ff7.png">
+image::Step11.png[Step11]
 
 You`re now directed to a detailed overview regarding the transaction. Here you can see the Contract that has been created. Copy and store it somewhere because you need it later and for submitting the node when you´re finished.
 
-<img width="713" alt="Step12" src="https://user-images.githubusercontent.com/95173225/153219199-88e4857b-67de-4e5a-977c-78f18edbcc11.png">
+image::Step12.png[Step12]
 
 
 **Step 5:**
@@ -92,53 +90,56 @@ You`re now directed to a detailed overview regarding the transaction. Here you c
 Log into your nodes dashboard. You´ll get there by typing http://your-ip:6688/ into your browser. If you have any problems getting there, make sure youre firewall on the servers allows the port 6688 ingoing. If it is not enabled, check log files and status of your node.
 You can do that by using the following commands on the vps shell:
 ! „plinode“ is the name of my docker container. It may varies to yours. Maybe you even have no name for your container. You can check the name or ID of your container with the following command: 
-docker ps -a
-sudo docker exec -it plinode /bin/bash -c ". ~/.profile && pm2 status"
-sudo docker exec -it plinode /bin/bash -c ". ~/.profile && pm2 log 0" or 1 depending on which logs you want to access.
+  docker ps -a
+  sudo docker exec -it plinode /bin/bash -c ". ~/.profile && pm2 status"
+  sudo docker exec -it plinode /bin/bash -c ". ~/.profile && pm2 log 0" or 1 depending on which logs you want to access.
 If you installed the node via script, you just need to use the following command:
-pm2 status
-pm2 logs 0/1
+  pm2 status
+  pm2 logs 0/1
 
 If you made it to the dashboard of your node, you`re looking at this:
 Click on „Keys“
  
-<img width="1201" alt="Step13" src="https://user-images.githubusercontent.com/95173225/153219248-9b788f85-4a64-43b7-9807-39e6e8d3015b.png">
+image::Step13.png[Step13]
 
 The top adress is the „Node Wallet Adress“ (1) you´ll also need later when submitting the node. Store it somewhere to get back to fast.
 Click on the button to copy the adress (2) because you need to fund the node now with 1 xdc and 1 pli in order to allow the node to send transactions and pay the fee for it. Right now the Balance is 0 (3).
  
-<img width="1241" alt="Step14" src="https://user-images.githubusercontent.com/95173225/153219265-41db4452-40c9-4efd-8c07-4e7cae2f5a8d.png">
+image::Step14.png[Step14]
 
 Open the XDCpay Wallet and press on „send“. Just send 1 xdc for now. 
  
+image::Step15.png[Step15]
+
 Next chose „Tokens“ (1) from the bottom list and then press on the Menu (2) 
  
-<img width="248" alt="Step17" src="https://user-images.githubusercontent.com/95173225/153219398-d847e765-0f82-4e57-94ab-65224561342f.png">
+image::Step17.png[Step17]
  
 And „send“ on the next window.
  
-<img width="262" alt="Step16" src="https://user-images.githubusercontent.com/95173225/153219437-f429b72a-88ed-4ad4-aa96-fd1aa1e7e0a4.png">
+image::Step16.png[Step16]
 
 After you successfully sent 1 xdc and 1 pli you should now see the balance on your node:
-<img width="1227" alt="Step18" src="https://user-images.githubusercontent.com/95173225/153219472-50adc299-5c8b-4dc9-9337-5abcc9217266.png">
+
+image::Step18.png[Step18]
 
 **Step 6:**
 
 Get back to your browser and click on the dropdown button to validate your node on the blockchain.
  
-<img width="220" alt="Step19" src="https://user-images.githubusercontent.com/95173225/153219648-e2dcb99e-d626-48c1-833b-1c8fe9059b33.png">
+image::Step19.png[Step19]
 
 In the „setFulfillment…“ Form you paste your nodes wallet adress in the following form: „adress“,true (1). Then Press the button (2)
  
-<img width="207" alt="Step20" src="https://user-images.githubusercontent.com/95173225/153219674-5c7a0573-b5a5-4f3c-ae3c-7322224d94c4.png">
+image::Step20.png[Step20]
 
 Once again you´re asked to confirm a transaction which you should do in order to proceed.
  
-<img width="233" alt="Step21" src="https://user-images.githubusercontent.com/95173225/153219740-a416e7b7-8816-4e2b-8445-c7c993da0ecc.png">
+image::Step21.png[Step21]
 
 Confirmation of a successfull transaction is shown on the bottom again.
  
-<img width="817" alt="Step22" src="https://user-images.githubusercontent.com/95173225/153219775-3d88461f-2057-4084-afb8-233506e6642c.png">
+image::Step22.png[Step22]
 
 **Step 7:**
 
@@ -188,85 +189,153 @@ Like this:
 Name (1) and endpoint (2) need to be the same (for docker installations, and how you named it. In my example it is „pluginei“)
 „Adresses“: (3) needs to be the oracle adress you received in Step 4. 
  
-
+image::Step23.png[Step23]
 
 Go to your nodes dashboard and click on „Jobs“ (1) and then on „New Job“ (2) 
 
+image::Step24.png[Step24]
+
 Paste your edited code:
- 
+
+image::Step25png[Step25]
 
 Hit „Create Job“ when youre ready.
- 
+
+image::Step26.png[Step26]
  
 If everything is fine, you should see this:
 
- 
+image::Step27.png[Step27]
 
 Next click on „Definition“ (1) and copy the Job ID like shown below (2).
- 
+
+image::Step28.png[Step28]
 
  
 Step 8:
 Go back to your browser (remix.xinfin.network)
 Click on the „RequestContract.sol“ file. If there is none. Just create it yourself.
  
-
+image::Step29.png[Step29]
  
 Here we need to paste the following code:
 
-
+  // SPDX-License-Identifier: MIT
+  pragma solidity ^0.4.24;
+  import "https://github.com/GoPlugin/contracts/blob/main/src/v0.4/PluginClient.sol";
+  import "https://github.com/GoPlugin/contracts/blob/main/src/v0.4/vendor/Ownable.sol";
+  contract AlarmClockSample is PluginClient,Ownable {
+      using Plugin for Plugin.Request;
+    
+      bool public alarmDone;
+      address private oracle;
+      bytes32 private jobId;
+      uint256 private fee;
+      
+      /**
+       * Network: Mainnet
+       * Oracle: Plugin - 0xf180e56bb575806aefaf2a7616622a9fc180b51c
+       * Job ID: Plugin - bcbac9232272445294102fdd1ee97c98
+       * Fee: 0.1 PLI
+       */
+      constructor(address _pli) public Ownable() {
+          setPluginToken(_pli);
+          oracle = 0xFcBD1c098Dd20d3D379C6dEAbe88749762111fE7;
+          jobId = "cd0d1a6f9d084c728487d2ff1c266e5f";
+          fee = 0.1 * 10 ** 18; // 0.1 PLI
+          alarmDone = false;
+      }
+      
+      /**
+       * Create a Plugin request to start an alarm and after
+       * the time in seconds is up, return throught the fulfillAlarm
+       * function
+       */
+      function requestAlarmClock(uint256 durationInSeconds) public returns (bytes32 requestId) 
+      {
+          Plugin.Request memory request = buildPluginRequest(jobId, address(this), this.fulfillAlarm.selector);
+          // This will return in 90 seconds
+          request.addUint("until", block.timestamp + durationInSeconds);
+          return sendPluginRequestTo(oracle, request, fee);
+      }
+      
+      /**
+       * Receive the response in the form of uint256
+       */ 
+      function fulfillAlarm(bytes32 _requestId, uint256 _volume) public recordPluginFulfillment(_requestId)
+      {
+          alarmDone = true;
+      }
+  function withdrawPli() public onlyOwner() { 
+          PliTokenInterface pliToken = PliTokenInterface(pluginTokenAddress());
+          require(pliToken.transfer(msg.sender, pliToken.balanceOf(address(this))), "Unable to transfer");
+      }
+  }
  
 Edit it, so that it looks like this:
 In oracle=YOURCONTRACTADRESS, paste yours (1)
 Same goes for jobId=YOURJOBID. Its the ID we just got from creating the AlarmClock Job.
- 
+
+image::Step30.png[Step30]
 
 This will create the AlarmClock Contract. So that the job can get triggered.
 
 After checking and editing the code you can hit the „Compile RequestContract.sol“ button. Please check the Compiler Version the same way you did for the „Oracle.sol“
 
- 
- 
+image::Step31.png[Step31]
+
 On the „Deploy & Run Transactions“ Tab you check for „Enviroment“ to be „Injected Web3“ (1), Account to be your Wallet adress (2), that your AlarmClockSample is selected as „Contract“ (3) and that you put the PLI Smart Contract Adress ( 0xff7412ea7c8445c46a8254dfb557ac1e48094391 ) into the „Deploy“button Form (4).
+ 
+image::Step32.png[Step32]
  
 Hit „Deploy“ and confirm the transaction with „submit“.
  
+image::Step33.png[Step33]
+
 The output should show as the following:
  
-
+image::Step34.png[Step34]
  
 Now you need to copy the transaction hash again like before:
  
+image::Step35.png[Step35]
 
 Go to https://explorer.xinfin.network , paste the hash and hit „search“.
 
- 
+image::Step36.png[Step36]
  
 Copy the adress that got created:
+
+image::Step37.png[Step37]
  
 And fund it with 1 pli. We do that because now, the transaction gets triggered by the contract we just created. And to be able to make a transaction on the blockchain it needs to pay its fee.
 Go to your wallet, select your pli token and send the token to the adress we just created.
- 
 
-
-
+image::Step38.png[Step38]
 
 Make sure the right wallet is selected (1), the receipient ist he contract we just got from the xinfin explorer and you dont send more than 1 pli. Less would also be ok, but we want to be on the safe side for now (and with the current prices of 1 token)
+
+image::Step39.png[Step39]
  
 After the transaction is confirmed and submitted, click on the dropdown arrow fort he AlarmClockSample.
  
+image::Step40.png[Step40]
 
 In the form for „requestAlarm“ put a „2“ (1) and hit the „requestAlarm…“ button (2).
 
-First of all the successfull transaction should be shown as output in your browser.
- 
+image::Step41.png[Step41]
 
+First of all the successfull transaction should be shown as output in your browser.
+
+image::Step42.png[Step42]
  
 And you should be able to see the triggered job at your nodes dashboard under „Jobs“ and „Runs“.
- 
+
+image::Step43.png[Step42]
+
 If you did everything accordingly, the result will be this:
  
-
+image::Step44.png[Step42]
 
 Thats it. You finished setting up the node. Its now ready to be submitted on your plugin dashboard which you can access via https://oracles.goplugin.co/
 
