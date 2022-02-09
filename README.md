@@ -1,3 +1,5 @@
+:imagesdir: img
+
 # deployment-guide
 This is my take on a guide to explain how to deploy the jobs and contracts to get a plugin node ready
 Node Oracle Deployment Guide
