@@ -13,7 +13,7 @@ After setting up the wallet,  we need to add an adress to it for the deployment 
 
 Press on the Menu (1) to open the „Wallet Options“. Then press on „Settings“ (2) to see the following:
  
-<img width="296" alt="Step1" src="https://user-images.githubusercontent.com/95173225/153218302-c320fb35-bf71-40aa-b86d-d1fa0f87936c.png">
+image::Step1.png
  
 Enter the „New RPC URL“ ( https://erpc.xinfin.network/ ) and press „save“
 
