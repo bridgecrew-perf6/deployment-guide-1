@@ -9,8 +9,9 @@ Node Oracle Deployment Guide
 
 First of all we need to install the Browser Plugin „XDCpay“. Create a Wallet and send some XDC and PLI there. 5 of each will be completly fine for you to get the idea.
 
+```
 After setting up the wallet,  we need to add an adress to it for the deployment to work.
- 
+```
 
 **Step 1:**
 
