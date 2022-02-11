@@ -9,9 +9,9 @@ Node Oracle Deployment Guide
 
 First of all we need to install the Browser Plugin „XDCpay“. Create a Wallet and send some XDC and PLI there. 5 of each will be completly fine for you to get the idea.
 
-```
+
 After setting up the wallet,  we need to add an adress to it for the deployment to work.
-```
+
 
 **Step 1:**
 
@@ -150,7 +150,7 @@ image::Step22.png[Step22]
 Next thing we need to do is to deploy a test job. In this case a simply Alarm Clock job.
 
 First we alter this code:
-
+```
     {
         "initiators":[
             {
@@ -187,7 +187,7 @@ First we alter this code:
         "startAt":null,
         "endAt":null
     }
-
+```
  
 Like this:
 Name (1) and endpoint (2) need to be the same (for docker installations, and how you named it. In my example it is „pluginei“)
@@ -224,6 +224,7 @@ image::Step29.png[Step29]
  
 Here we need to paste the following code:
 
+```
   // SPDX-License-Identifier: MIT
   pragma solidity ^0.4.24;
   import "https://github.com/GoPlugin/contracts/blob/main/src/v0.4/PluginClient.sol";
@@ -275,7 +276,7 @@ Here we need to paste the following code:
           require(pliToken.transfer(msg.sender, pliToken.balanceOf(address(this))), "Unable to transfer");
       }
   }
- 
+```
 Edit it, so that it looks like this:
 In oracle=YOURCONTRACTADRESS, paste yours (1)
 Same goes for jobId=YOURJOBID. Its the ID we just got from creating the AlarmClock Job.
