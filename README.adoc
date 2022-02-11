@@ -245,8 +245,8 @@ Here we need to paste the following code:
        */
       constructor(address _pli) public Ownable() {
           setPluginToken(_pli);
-          oracle = 0xFcBD1c098Dd20d3D379C6dEAbe88749762111fE7;
-          jobId = "cd0d1a6f9d084c728487d2ff1c266e5f";
+          oracle = YOURCONTRACT;
+          jobId = "YOURJOBID";
           fee = 0.1 * 10 ** 18; // 0.1 PLI
           alarmDone = false;
       }
