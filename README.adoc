@@ -19,7 +19,11 @@ Press on the Menu (1) to open the „Wallet Options“. Then press on „Setting
  
 image::Step1.png[Step1]
  
-Enter the „New RPC URL“ ( https://erpc.xinfin.network/ ) and press „save“
+Enter the „Network Name“* (The name can be whatever you want)
+Enter the "New RPC URL" ( https://erpc.xinfin.network/ )
+Enter the Chain ID: 50
+Rest is optional.
+Press "Add"
 
 image::Step2.png[Step2]
 
